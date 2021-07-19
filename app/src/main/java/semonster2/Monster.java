@@ -2,11 +2,17 @@ package semonster2;
 
 public class Monster {
 
-  String name = "デュラハン";
-  int rare = 0;
+  private String name;
+  private int rare = 0;
 
-  Monster() {
+  Monster(int nameNum, int rareNum) {
+    this.name = this.MonsterList(nameNum);
+    this.rare = rareNum;
+  }
 
+  String MonsterList(int number){
+    String monsters[] = {"スライム","デュラハン","ドラゴン","ウィッチ","魔王"};
+    return monsters[number];
   }
 
   @Override
