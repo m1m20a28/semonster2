@@ -12,7 +12,7 @@ public class App {
     System.out.println(new App().getGreeting());
     String monster = new Monster(4, 10).toString();
     System.out.println(monster);
-    Player player = new Player("タケ", 200);
+    Player player = new Player("滝廉太郎", 500);
     System.out.println(player.callPlayer());
   }
 }
