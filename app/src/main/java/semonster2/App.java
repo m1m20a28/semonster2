@@ -12,8 +12,8 @@ public class App {
     System.out.println(new App().getGreeting());
     String monster = new Monster(4, 10, 3).toString();
     System.out.println(monster);
-    Player player = new Player("滝廉太郎", 500);
-    System.out.println(player.callPlayer());
+    Player player = new Player("滝廉太郎", 500, 0);
+    System.out.println(player.dmgPlayer());
     String monster2 = new Monster(4, 10, 3).dmgString();
     System.out.println(monster2);
   }
