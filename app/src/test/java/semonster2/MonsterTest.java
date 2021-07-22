@@ -6,7 +6,8 @@ import static org.junit.Assert.*;
 public class MonsterTest {
   @Test
   public void testMonster() {
-    Monster monster = new Monster(4,10);
+    Monster monster = new Monster(4, 10, 500);
     assertEquals("魔王:レア度[10]", monster.toString());
+    assertEquals(100, monster.attack(400));
   }
 }
