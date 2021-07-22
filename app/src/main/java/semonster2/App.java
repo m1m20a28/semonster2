@@ -8,6 +8,10 @@ public class App {
     return "こんにちは SEMonster";
   }
 
+  public String getendword() {
+    return "さようなら SEMonster";
+  }
+
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
     String monster = new Monster(4, 10, 3).toString();
@@ -16,5 +20,6 @@ public class App {
     System.out.println(player.dmgPlayer());
     String monster2 = new Monster(4, 10, 3).dmgString();
     System.out.println(monster2);
+    System.out.println(new App().getendword());
   }
 }
