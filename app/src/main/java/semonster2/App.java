@@ -10,9 +10,11 @@ public class App {
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
-    String monster = new Monster(4, 10).toString();
+    String monster = new Monster(4, 10, 3).toString();
     System.out.println(monster);
     Player player = new Player("滝廉太郎", 500);
     System.out.println(player.callPlayer());
+    String monster2 = new Monster(4, 10, 3).dmgString();
+    System.out.println(monster2);
   }
 }
