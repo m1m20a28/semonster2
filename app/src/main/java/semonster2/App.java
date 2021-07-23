@@ -10,8 +10,12 @@ public class App {
 
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
-    String monster = new Monster(4, 10).toString();
+    String monster = new Monster(4, 10, 8).toString();
     System.out.println(monster);
+    String be_rarechange = new Monster(4, 10, 8).updwrareString();
+    System.out.println(be_rarechange);
+    String af_rarechange = new Monster(4, 10, 8).truerareString();
+    System.out.println(af_rarechange);
     Player player = new Player("滝廉太郎", 500);
     System.out.println(player.callPlayer());
   }
