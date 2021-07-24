@@ -43,4 +43,10 @@ public class Monster {
   public String dmgString() {
     return this.name + "の攻撃[" + this.waza + "]:" + this.dmg + "ダメージ!!";
   }
+
+  public int attack(int damage) {
+    this.mhp -= damage;
+    return this.mhp;
+  }
+
 }

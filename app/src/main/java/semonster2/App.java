@@ -9,12 +9,16 @@ public class App {
   }
 
   public static void main(String[] args) {
+    int at = 3, pat = 0;
     System.out.println(new App().getGreeting());
-    String monster = new Monster(4, 10, 3).toString();
-    System.out.println(monster);
-    Player player = new Player("滝廉太郎", 500, 0);
+    Monster monster = new Monster(4, 10, at);
+    System.out.println(monster.toString());
+    Player player = new Player("滝廉太郎", 500, pat);
     System.out.println(player.dmgPlayer());
-    String monster2 = new Monster(4, 10, 3).dmgString();
-    System.out.println(monster2);
+    int a = monster.attack(player.DMGList(pat));
+    System.out.println(monster.dmgString());
+    a = player.attack(monster.DMGList(at));
+    System.out.println(monster.toString());
+    System.out.println(player.callPlayer());
   }
 }
