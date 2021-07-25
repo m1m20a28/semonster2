@@ -7,13 +7,15 @@ public class Monster {
   private int rare = 0;
   private int dmg;
   private int mhp;
+  private int updn;
 
-  Monster(int nameNum, int rareNum, int wazaNum) {
+  Monster(int nameNum, int rareNum, int wazaNum, int rareUpDn) {
     this.name = this.MonsterList(nameNum);
     this.mhp = this.MonsterHPList(nameNum);
     this.rare = rareNum;
     this.waza = this.WazaList(wazaNum);
     this.dmg = this.DMGList(wazaNum);
+    this.updn = rareUpDn;
   }
 
   String MonsterList(int number) {
@@ -49,4 +51,11 @@ public class Monster {
     return this.mhp;
   }
 
+  public String updwrareString() {
+    return this.name + ":レア度[" + this.rare + "]"+ "のレア度を[" + this.updn + "]に変更";
+  }
+
+  public String truerareString() {
+    return this.name + ":レア度[" + this.updn + "]";
+  }
 }

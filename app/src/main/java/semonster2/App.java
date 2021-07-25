@@ -13,16 +13,22 @@ public class App {
   }
 
   public static void main(String[] args) {
-    int at = 3, pat = 0;
+    int at = 3, pat = 0, rare = 10;
     System.out.println(new App().getGreeting());
-    Monster monster = new Monster(4, 10, at);
+    Monster monster = new Monster(4, 10, at, rare);
     System.out.println(monster.toString());
     Player player = new Player("滝廉太郎", 500, pat);
+    System.out.println(player.callPlayer());
     System.out.println(player.dmgPlayer());
     int a = monster.attack(player.DMGList(pat));
     System.out.println(monster.dmgString());
     a = player.attack(monster.DMGList(at));
     System.out.println(monster.toString());
+    rare = 8;
+    String be_rarechange = new Monster(4, 10, at, rare).updwrareString();
+    System.out.println(be_rarechange);
+    String af_rarechange = new Monster(4, 10, at, rare).truerareString();
+    System.out.println(af_rarechange);
     System.out.println(player.callPlayer());
     System.out.println(new App().getendword());
   }
