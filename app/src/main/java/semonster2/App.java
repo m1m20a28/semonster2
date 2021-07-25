@@ -8,6 +8,10 @@ public class App {
     return "こんにちは SEMonster";
   }
 
+  public String getendword() {
+    return "さようなら SEMonster";
+  }
+
   public static void main(String[] args) {
     int at = 3, pat = 0;
     System.out.println(new App().getGreeting());
@@ -20,5 +24,6 @@ public class App {
     a = player.attack(monster.DMGList(at));
     System.out.println(monster.toString());
     System.out.println(player.callPlayer());
+    System.out.println(new App().getendword());
   }
 }
